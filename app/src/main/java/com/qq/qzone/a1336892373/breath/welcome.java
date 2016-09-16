@@ -57,7 +57,7 @@ public class welcome extends Activity {
         new Thread(new Runnable() {
             @Override
             public void run() {
-                try { Thread.sleep(6600); } catch (Exception e) { }
+                try { Thread.sleep(5600); } catch (Exception e) { }
                 Message message1 = new Message();   message1.what = 1;  myhandler.sendMessage(message1);
                 try { Thread.sleep(550); } catch (Exception e) { }
                 Message message2 = new Message();   message2.what = 2;  myhandler.sendMessage(message2);
@@ -72,7 +72,7 @@ public class welcome extends Activity {
         layouthu.setEvaluator(new ArgbEvaluator());
         ObjectAnimator layoutxi = ObjectAnimator
                 .ofInt(layout, "backgroundColor", getResources().getColor(R.color.welcome_qian), getResources().getColor(R.color.welcome_shen))
-                .setDuration(3000);
+                .setDuration(2000);
         layoutxi.setEvaluator(new ArgbEvaluator());
         ObjectAnimator layouthu2 = ObjectAnimator
                 .ofInt(layout, "backgroundColor", getResources().getColor(R.color.welcome_shen), getResources().getColor(R.color.welcome_qian))
@@ -87,6 +87,7 @@ public class welcome extends Activity {
         ObjectAnimator textmove = ObjectAnimator
                 .ofFloat(textView, "translationY", textView.getBottom(), textView.getBottom() -100 )
                 .setDuration(900);
+        textmove.setInterpolator(new DecelerateInterpolator());
 
 
         AnimatorSet animatorSet = new AnimatorSet();

@@ -9,7 +9,7 @@
         android:layout_centerHorizontal="true"
         android:id="@+id/welcome_text"
         android:text="呼  吸"
-        android:textSize="60sp"
+        android:textSize="63sp"
         android:padding="20dp"
         android:gravity="center_horizontal"
         android:lineSpacingMultiplier="1.35"
