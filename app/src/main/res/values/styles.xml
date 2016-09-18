@@ -25,7 +25,7 @@
 
     <style name="welcomeTheme" parent="nullAnimation">
         <item name="android:activityOpenEnterAnimation">@android:anim/fade_in</item>
-        <item name="android:windowBackground">@color/welcome_shen</item>
+        <item name="android:windowBackground">@null</item>
         <item name="android:windowNoTitle">true</item>
     </style>
 
@@ -37,7 +37,7 @@
 
     <style name="finishTheme" parent="nullAnimation">
         <item name="android:activityOpenEnterAnimation">@android:anim/fade_in</item>
-        <item name="android:windowBackground">@color/welcome_qian</item>
+        <item name="android:windowBackground">@null</item>
         <item name="android:windowNoTitle">true</item>
     </style>
 

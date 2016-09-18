@@ -1,11 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/finish_layout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.2">
+    <ImageView
+        android:visibility="invisible"
+        android:id="@+id/finish_dayuan"
+        android:layout_gravity="center"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" />
+    <TextView
+        android:id="@+id/finish_dayuantext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="#FAFAFA"
+        android:textSize="90sp" />
+    </FrameLayout>
+
 
     <TextView
-        android:text="dsnfhfiqprhf"
+        android:visibility="invisible"
+        android:gravity="center"
+        android:paddingTop="20dp"
+        android:text="您已进行了一段深呼吸\n释放压力  欢迎回来"
+        android:lineSpacingMultiplier="1.3"
+        android:id="@+id/finish_xiatext"
+        android:textSize="25sp"
+        android:textColor="#FAFAFA"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp" />
+
+    <Button
+        android:visibility="invisible"
+        android:textColor="#FAFAFA"
+        android:background="@drawable/yanse_button"
+        android:id="@+id/finish_button"
+        android:layout_gravity="center_horizontal"
+        android:text="        颜 色        "
+        android:layout_marginBottom="15dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
-</RelativeLayout>
+</LinearLayout>

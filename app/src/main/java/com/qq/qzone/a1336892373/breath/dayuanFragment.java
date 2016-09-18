@@ -1,6 +1,8 @@
 package com.qq.qzone.a1336892373.breath;
 
 import com.qq.qzone.a1336892373.breath.tools.huitan;
+import com.qq.qzone.a1336892373.breath.tools.myColor;
+
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.app.Fragment;
@@ -45,6 +47,8 @@ public class dayuanFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_dayuan, container, false);
 
         dayuan = (ImageView) view.findViewById(R.id.dayuan);
+        myColor color = new myColor(getActivity());
+        dayuan.setImageResource(color.getTUPIAN());
 
         new Thread(new Runnable() {
             @Override

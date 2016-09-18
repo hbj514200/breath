@@ -24,7 +24,13 @@
             android:theme="@style/mainTheme">
         </activity>
 
-        <activity android:name=".FinishActivity"
+        <activity
+            android:name=".FinishActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/finishTheme">
+        </activity>
+
+        <activity android:name=".chooseActivity"
             android:screenOrientation="portrait"
             android:theme="@style/finishTheme">
         </activity>

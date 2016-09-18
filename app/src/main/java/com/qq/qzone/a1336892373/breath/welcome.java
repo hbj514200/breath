@@ -15,8 +15,11 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.qq.qzone.a1336892373.breath.tools.myColor;
+
 public class welcome extends Activity {
 
+    private myColor color;
     private TextView textView;
     private RelativeLayout layout;
     private ImageView button;
@@ -42,9 +45,13 @@ public class welcome extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
 
-        textView = (TextView) findViewById(R.id.welcome_text);
         layout = (RelativeLayout) findViewById(R.id.welcome_layout);
+        color = new myColor(welcome.this);
+        layout.setBackgroundColor(getResources().getColor(color.getSHEN()));
+
         button = (ImageView) findViewById(R.id.welcome_button);
+        button.setImageResource(color.getTUPIAN());
+        textView = (TextView) findViewById(R.id.welcome_text);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -67,15 +74,15 @@ public class welcome extends Activity {
 
     private void startAnimator() {
         ObjectAnimator layouthu = ObjectAnimator
-                .ofInt(layout, "backgroundColor", getResources().getColor(R.color.welcome_shen), getResources().getColor(R.color.welcome_qian))
+                .ofInt(layout, "backgroundColor", getResources().getColor(color.getSHEN()), getResources().getColor(color.getQIAN()))
                 .setDuration(3000);
         layouthu.setEvaluator(new ArgbEvaluator());
         ObjectAnimator layoutxi = ObjectAnimator
-                .ofInt(layout, "backgroundColor", getResources().getColor(R.color.welcome_qian), getResources().getColor(R.color.welcome_shen))
+                .ofInt(layout, "backgroundColor", getResources().getColor(color.getQIAN()), getResources().getColor(color.getSHEN()))
                 .setDuration(2000);
         layoutxi.setEvaluator(new ArgbEvaluator());
         ObjectAnimator layouthu2 = ObjectAnimator
-                .ofInt(layout, "backgroundColor", getResources().getColor(R.color.welcome_shen), getResources().getColor(R.color.welcome_qian))
+                .ofInt(layout, "backgroundColor", getResources().getColor(color.getSHEN()), getResources().getColor(color.getQIAN()))
                 .setDuration(3000);
         layouthu2.setEvaluator(new ArgbEvaluator());
         ObjectAnimator textalp = ObjectAnimator

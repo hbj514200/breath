@@ -6,4 +6,26 @@
 
     <color name="welcome_qian">#2BAF2B</color>
     <color name="welcome_shen">#0A7E07</color>
+    <color name="welcome_liang">#3FC53F</color>     <!-- 绿色 -->
+
+    <color name="welcome_chen_qian">#EF9716</color>
+    <color name="welcome_chen_shen">#F57C00</color>
+    <color name="welcome_chen_liang">#FFA726</color>     <!-- 橙色 -->
+
+    <color name="welcome_blue_qian">#24B0EF</color>
+    <color name="welcome_blue_shen">#0288D1</color>
+    <color name="welcome_blue_liang">#81D4FA</color>     <!-- 蓝色 -->
+
+    <color name="welcome_fen_qian">#EC407A</color>
+    <color name="welcome_fen_shen">#C2185B</color>
+    <color name="welcome_fen_liang">#F06292</color>     <!-- 粉色 -->
+
+    <color name="welcome_zi_qian">#AB47BC</color>
+    <color name="welcome_zi_shen">#7B1FA2</color>
+    <color name="welcome_zi_liang">#BA68C8</color>     <!-- 紫色 -->
+
+    <color name="welcome_yellow_qian">#FFEB3B</color>
+    <color name="welcome_yellow_shen">#FBC02D</color>
+    <color name="welcome_yellow_liang">#FFF176</color>     <!-- 黄色  -->
+
 </resources>
