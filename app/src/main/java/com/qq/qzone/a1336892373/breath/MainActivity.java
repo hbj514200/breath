@@ -11,13 +11,12 @@ import android.os.Message;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-
 import com.qq.qzone.a1336892373.breath.tools.myColor;
 
 public class MainActivity extends Activity {
 
-    private String[] st = { "", "跟 着 节 奏", "深 呼 吸", "放 松", "感 受 自 己", "我 很 快 乐"};
-    private int textFlag = 1;
+    private String[] st;
+    private int textFlag = 0;
     private TextView text;
     private Handler myhandler = new Handler(Looper.getMainLooper()) {
         @Override
@@ -30,7 +29,7 @@ public class MainActivity extends Activity {
                     text.setVisibility(View.VISIBLE);
                     text.setText(st[textFlag]);
                     break;
-                case 5 :
+                case 6 :
                     startActivity( new Intent(MainActivity.this, FinishActivity.class) );
                     finish();
                     break;
@@ -57,16 +56,26 @@ public class MainActivity extends Activity {
             public void run() {
                 try { Thread.sleep(1500); } catch (Exception e) { }
                 Message message1 = new Message(); message1.what = 1;    myhandler.sendMessage(message1);         //文字
-                try { Thread.sleep(2000); } catch (Exception e) { }
+                try { Thread.sleep(20000); } catch (Exception e) { }
                 Message message2 = new Message(); message2.what = 1;    myhandler.sendMessage(message2);         //文字
-                try { Thread.sleep(2000); } catch (Exception e) { }
+                try { Thread.sleep(20000); } catch (Exception e) { }
                 Message message3 = new Message(); message3.what = 1;    myhandler.sendMessage(message3);         //文字
-                try { Thread.sleep(2000); } catch (Exception e) { }
+                try { Thread.sleep(20000); } catch (Exception e) { }
                 Message message4 = new Message(); message4.what = 1;    myhandler.sendMessage(message4);         //文字
-                try { Thread.sleep(2000); } catch (Exception e) { }
-                Message message5 = new Message(); message5.what = 5;    myhandler.sendMessage(message5);         //activity跳转
+                try { Thread.sleep(20000); } catch (Exception e) { }
+                Message message5 = new Message(); message5.what = 1;    myhandler.sendMessage(message5);         //文字
+                try { Thread.sleep(20000); } catch (Exception e) { }
+                Message message6 = new Message(); message6.what = 6;    myhandler.sendMessage(message6);         //activity跳转
             }
         }).start();
+
+        st = new String[]{"",
+                getResources().getString(R.string.genzhe),
+                getResources().getString(R.string.shenhuxi),
+                getResources().getString(R.string.fangsong),
+                getResources().getString(R.string.ganshou),
+                getResources().getString(R.string.wohen)
+        };
     }
 
     private void wenzi(){

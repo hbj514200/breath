@@ -29,7 +29,7 @@
         android:visibility="invisible"
         android:gravity="center"
         android:paddingTop="20dp"
-        android:text="您已进行了一段深呼吸\n释放压力  欢迎回来"
+        android:text="@string/finish_zhufu"
         android:lineSpacingMultiplier="1.3"
         android:id="@+id/finish_xiatext"
         android:textSize="25sp"
@@ -44,7 +44,7 @@
         android:background="@drawable/yanse_button"
         android:id="@+id/finish_button"
         android:layout_gravity="center_horizontal"
-        android:text="        颜 色        "
+        android:text="@string/yanse"
         android:layout_marginBottom="15dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />

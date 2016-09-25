@@ -2,7 +2,6 @@ package com.qq.qzone.a1336892373.breath;
 
 import com.qq.qzone.a1336892373.breath.tools.huitan;
 import com.qq.qzone.a1336892373.breath.tools.myColor;
-
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.app.Fragment;
@@ -15,7 +14,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.ImageView;
-
 import java.util.Timer;
 import java.util.TimerTask;
 

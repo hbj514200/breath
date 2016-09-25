@@ -1,3 +1,21 @@
 <resources>
+
     <string name="app_name">Breath</string>
+    <string name="banben">深呼吸 Ver1.0</string>
+    <string name="yanse">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;颜 色&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</string>
+    <string name="finish_zhufu">您已进行了一段深呼吸\n心灵旅程  欢迎回来</string>
+    <string name="huxi">呼  吸</string>
+    <string name="changpian">每天忙碌的生活使得我们身心疲惫, 我们又曾何时停下脚步静静地放松自己? 多希望就是现在, 你可以面带微笑，去感受一下自己的呼吸, 身体与心灵交相辉映，或许会构成这世界上最美丽的风景。</string>
+    <string name="genzhe">跟 着 节 奏</string>
+    <string name="shenhuxi">深 呼 吸</string>
+    <string name="fangsong">放 松</string>
+    <string name="ganshou">感 受 自 己</string>
+    <string name="wohen">我 很 快 乐</string>
+    <string name="chen">活力橙</string>
+    <string name="lan">大海蓝</string>
+    <string name="fen">水嫩粉</string>
+    <string name="zi">妩媚紫</string>
+    <string name="huang">蛋碎黄</string>
+    <string name="lv">天然绿</string>
+
 </resources>

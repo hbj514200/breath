@@ -14,7 +14,7 @@
         android:layout_weight="0.8"/>
 
     <TextView
-        android:text="深呼吸 Ver1.0"
+        android:text="@string/banben"
         android:layout_gravity="center_horizontal"
         android:textColor="#FAFAFA"
         android:layout_width="wrap_content"

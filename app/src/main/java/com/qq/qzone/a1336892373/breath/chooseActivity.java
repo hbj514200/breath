@@ -7,16 +7,18 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
-import android.widget.Toast;
 import com.qq.qzone.a1336892373.breath.tools.myColor;
 
 public class chooseActivity extends Activity {
 
-    private String[] data = new String[]{ "活力橙", "大海蓝", "水嫩粉", "妩媚紫", "蛋碎黄", "天然绿"};
+    private String[] data = new String[]{ getResources().getString(R.string.chen),
+            getResources().getString(R.string.lan),
+            getResources().getString(R.string.fen),
+            getResources().getString(R.string.zi),
+            getResources().getString(R.string.huang),
+            getResources().getString(R.string.lv)        };
     private ListView mListView;
 
     @Override

@@ -53,14 +53,14 @@ public class xintiaoFragment extends Fragment {
                 myhandler.sendMessage(message);
             }
         };
-        timer.schedule(task, 700, 1500);
+        timer.schedule(task, 1500, 1500);
     }
 
     private void init(){
-        ObjectAnimator suoX = ObjectAnimator.ofFloat(dayuan, "scaleX", 1f, 0.75f).setDuration(85);
-        ObjectAnimator suoY = ObjectAnimator.ofFloat(dayuan, "scaleY", 1f, 0.75f).setDuration(85);
-        ObjectAnimator fangX = ObjectAnimator.ofFloat(dayuan, "scaleX", 0.8f, 1f).setDuration(230);
-        ObjectAnimator fangY = ObjectAnimator.ofFloat(dayuan, "scaleY", 0.8f, 1f).setDuration(230);
+        ObjectAnimator suoX = ObjectAnimator.ofFloat(dayuan, "scaleX", 1f, 0.85f).setDuration(85);
+        ObjectAnimator suoY = ObjectAnimator.ofFloat(dayuan, "scaleY", 1f, 0.85f).setDuration(85);
+        ObjectAnimator fangX = ObjectAnimator.ofFloat(dayuan, "scaleX", 0.82f, 1f).setDuration(230);
+        ObjectAnimator fangY = ObjectAnimator.ofFloat(dayuan, "scaleY", 0.82f, 1f).setDuration(230);
         suoX.setInterpolator(new DecelerateInterpolator());
         suoY.setInterpolator(new DecelerateInterpolator());
         fangX.setInterpolator(new DecelerateInterpolator());

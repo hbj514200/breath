@@ -8,7 +8,7 @@
         android:layout_marginTop="120dp"
         android:layout_centerHorizontal="true"
         android:id="@+id/welcome_text"
-        android:text="呼  吸"
+        android:text="@string/huxi"
         android:textSize="63sp"
         android:padding="20dp"
         android:gravity="center_horizontal"
@@ -28,14 +28,26 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
-    <ImageView
-        android:visibility="gone"
-        android:layout_marginBottom="35dp"
+
+    <FrameLayout
         android:layout_above="@id/welcome_xiaotext"
-        android:id="@+id/welcome_button"
-        android:layout_centerHorizontal="true"
-        android:src="@drawable/welcome_btton"
-        android:layout_width="140dp"
-        android:layout_height="140dp" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true">
+        <ImageView
+            android:visibility="gone"
+            android:layout_marginBottom="35dp"
+            android:id="@+id/welcome_button"
+            android:layout_width="140dp"
+            android:layout_height="140dp" />
+        <ImageView
+            android:visibility="gone"
+            android:layout_marginBottom="35dp"
+            android:id="@+id/welcome_go"
+            android:src="@drawable/welcome_go"
+            android:layout_width="140dp"
+            android:layout_height="140dp" />
+    </FrameLayout>
+
 
 </RelativeLayout>
