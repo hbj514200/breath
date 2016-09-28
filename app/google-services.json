@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "230048781226",
+    "firebase_url": "https://breath-2147a.firebaseio.com",
+    "project_id": "breath-2147a",
+    "storage_bucket": "breath-2147a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:230048781226:android:fd34d94526318b8e",
+        "android_client_info": {
+          "package_name": "com.qq.qzone.a1336892373.breath"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "230048781226-1gmt4m5144kmh1f6vjfufshvbfqin549.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAu9DLAvK2KAIY3dKUUnhFqGHYUjtcdaZc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

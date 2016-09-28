@@ -11,10 +11,13 @@ import android.os.Message;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.google.firebase.analytics.FirebaseAnalytics;
 import com.qq.qzone.a1336892373.breath.tools.myColor;
 
 public class MainActivity extends Activity {
 
+    private FirebaseAnalytics mFirebaseAnalytics;
     private String[] st;
     private int textFlag = 0;
     private TextView text;
@@ -45,6 +48,7 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
         myColor color = new myColor(MainActivity.this);
         LinearLayout layout = (LinearLayout) findViewById(R.id.main_layout);
         layout.setBackgroundColor(getResources().getColor(color.getQIAN()));
@@ -64,7 +68,7 @@ public class MainActivity extends Activity {
                 Message message4 = new Message(); message4.what = 1;    myhandler.sendMessage(message4);         //文字
                 try { Thread.sleep(20000); } catch (Exception e) { }
                 Message message5 = new Message(); message5.what = 1;    myhandler.sendMessage(message5);         //文字
-                try { Thread.sleep(20000); } catch (Exception e) { }
+                try { Thread.sleep(25000); } catch (Exception e) { }
                 Message message6 = new Message(); message6.what = 6;    myhandler.sendMessage(message6);         //activity跳转
             }
         }).start();

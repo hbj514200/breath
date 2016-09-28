@@ -13,18 +13,21 @@ import com.qq.qzone.a1336892373.breath.tools.myColor;
 
 public class chooseActivity extends Activity {
 
-    private String[] data = new String[]{ getResources().getString(R.string.chen),
-            getResources().getString(R.string.lan),
-            getResources().getString(R.string.fen),
-            getResources().getString(R.string.zi),
-            getResources().getString(R.string.huang),
-            getResources().getString(R.string.lv)        };
+    private String[] data;
     private ListView mListView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_choose);
+
+        data = new String[]{
+                getResources().getString(R.string.chen),
+                getResources().getString(R.string.lan),
+                getResources().getString(R.string.fen),
+                getResources().getString(R.string.zi),
+                getResources().getString(R.string.huang),
+                getResources().getString(R.string.lv)        };
 
         huanse();
 
@@ -100,6 +103,12 @@ public class chooseActivity extends Activity {
     private void chongqi(){
         startActivity( new Intent(chooseActivity.this, chooseActivity.class));
         finish();
+    }
+
+    @Override
+    protected void onStop() {
+        onDestroy();
+        super.onStop();
     }
 
 }

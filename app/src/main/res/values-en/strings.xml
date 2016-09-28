@@ -3,9 +3,9 @@
 <string name = "app_name"> breathing </string>
 <string name = "banben"> breathing Ver1.0 </string>
 <string name = "yanse"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Color&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</string>
-<string name = "finish_zhufu">You have made some deep breaths \n spiritual journey   Welcome back</string>
+<string name = "finish_zhufu">Deep breathing relax the soul\nSpiritual journey Welcome back</string>
 <string name = "huxi"> breathing </string>
-<string name = "changpian">Daily busy life makes us physically and mentally exhausted, when can we had stopped to quietly relax? How I wish you could with a smile, to feel his breath, body and mountains add soul and beauty to each other. May constitute the world most beautiful scenery.</string>
+<string name = "changpian">Every day busy life makes us exhaustion of body and mind, when we had to stop to relax quietly? Wish right now, you can smile, to feel your breath, body and mind in photograph reflect, may constitute the most beautiful scenery in the world.</string>
 <string name = "genzhe"> follow the rhythm </string>
 <string name = "shenhuxi"> deep breathing </string>
 <string name = "fangsong"> relax yourself </string>
@@ -13,9 +13,11 @@
 <string name = "wohen">  life is a chain of moments of enjoyment,\n not only about survival </string>
 <string name = "chen"> Vibrant orange </string>
 <string name = "lan"> Sea blue</string>
-<string name = "fen"> Tenderpink </string>
+<string name = "fen"> Tender pink </string>
 <string name = "zi"> Charming Purple </string>
 <string name = "huang"> Broken egg yellow </string>
 <string name = "lv"> Natural Green </string>
+<string name="tuichu">&#160;&#160;&#160;exit&#160;&#160;&#160;</string>
+<string name="lantian">Walk and fell more,  Look at the blue sky</string>
 
 </resources>

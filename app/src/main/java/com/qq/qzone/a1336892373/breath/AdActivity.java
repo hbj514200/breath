@@ -3,38 +3,34 @@ package com.qq.qzone.a1336892373.breath;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.app.Activity;
-import android.content.Intent;
-import android.content.SharedPreferences;
 import android.graphics.drawable.GradientDrawable;
-import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
+import android.os.Bundle;
 import android.view.View;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import com.qq.qzone.a1336892373.breath.tools.myColor;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.NativeExpressAdView;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class FinishActivity extends Activity {
-
+public class AdActivity extends Activity {
     AnimatorSet set = new AnimatorSet();
     public Timer timer = new Timer();
     private Button yanseButton;
     private TextView xiatext;
-    private TextView dayuantext;
-    private int tiaozhuanflag = 0;
+    private ImageView dayuantext;
     private ImageView dayuan;
     private Handler myhandler = new Handler(Looper.getMainLooper()) {
         @Override
         public void handleMessage(Message msg) {
             switch (msg.what){
                 case 1 :
-                    cishu();
                     kaichang();
                     break;
                 case 2 :
@@ -47,8 +43,8 @@ public class FinishActivity extends Activity {
                     set.start();
                     break;
                 case 5 :
-                    startActivity(new Intent(FinishActivity.this, AdActivity.class));
-                    finish();
+                    if (Math.random()*100<=4)       wuchu();
+                    break;
                 default:
                     break;
             }
@@ -60,22 +56,21 @@ public class FinishActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_finish);
-
+        setContentView(R.layout.activity_ad);
 
         dayuan = (ImageView) findViewById(R.id.finish_dayuan);
-        dayuantext = (TextView) findViewById(R.id.finish_dayuantext);
+        dayuantext = (ImageView) findViewById(R.id.finish_dayuantext);
         xiatext = (TextView) findViewById(R.id.finish_xiatext);
         yanseButton = (Button) findViewById(R.id.finish_button);
 
         yanseButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity( new Intent(FinishActivity.this, chooseActivity.class));
-                tiaozhuanflag = 1;
+                finish();
             }
         });
 
+        admob();
         huanse();
         init();
         huxi();
@@ -89,8 +84,7 @@ public class FinishActivity extends Activity {
                 Message message2 = new Message(); message2.what = 2;    myhandler.sendMessage(message2);
                 try { Thread.sleep(1300); }  catch (Exception e) { }
                 Message message3 = new Message(); message3.what = 3;    myhandler.sendMessage(message3);
-                try { Thread.sleep(6000); }  catch (Exception e) { }
-                if (tiaozhuanflag==1)       try { Thread.sleep(12000); }  catch (Exception e) { }
+                try { Thread.sleep(2000); }  catch (Exception e) { }
                 Message message5 = new Message(); message5.what = 5;    myhandler.sendMessage(message5);
             }
         }).start();
@@ -105,21 +99,6 @@ public class FinishActivity extends Activity {
         fangx.start();  fangy.start();
     }
 
-    private void cishu(){
-        SharedPreferences pre= getSharedPreferences("mydata", Activity.MODE_PRIVATE);
-        SharedPreferences.Editor editor = pre.edit();
-        int cishu = pre.getInt("cishu", 1);
-        dayuantext.setText(cishu+"");
-        editor.putInt("cishu", cishu+1);
-        editor.commit();
-    }
-
-    private void wenzi(){
-        ObjectAnimator xiatextalp = ObjectAnimator.ofFloat(xiatext, "alpha", 0f, 1f).setDuration(2000);
-        xiatext.setVisibility(View.VISIBLE);
-        xiatextalp.start();
-    }
-
     private void anniu(){
         ObjectAnimator buttonX = ObjectAnimator.ofFloat(yanseButton, "scaleX", 0.05f, 1f).setDuration(800);
         ObjectAnimator buttonY = ObjectAnimator.ofFloat(yanseButton, "scaleY", 0.05f, 1f).setDuration(800);
@@ -128,13 +107,18 @@ public class FinishActivity extends Activity {
         buttonX.start();  buttonY.start();
     }
 
+    private void wenzi(){
+        ObjectAnimator xiatextalp = ObjectAnimator.ofFloat(xiatext, "alpha", 0f, 1f).setDuration(2000);
+        xiatext.setVisibility(View.VISIBLE);
+        xiatextalp.start();
+    }
+
     private void huanse(){
-        myColor color = new myColor(FinishActivity.this);
         LinearLayout layout = (LinearLayout) findViewById(R.id.finish_layout);
-        layout.setBackgroundColor(getResources().getColor(color.getQIAN()));
-        dayuan.setImageResource(color.getTUPIAN());
+        layout.setBackgroundColor(getResources().getColor(R.color.welcome_blue_qian));
+        dayuan.setImageResource(R.drawable.dayuan_blue);
         GradientDrawable myGrad = (GradientDrawable) yanseButton.getBackground();
-        myGrad.setColor(getResources().getColor(color.getLIANG()));
+        myGrad.setColor(getResources().getColor(R.color.welcome_blue_qian));
     }
 
     @Override
@@ -162,9 +146,23 @@ public class FinishActivity extends Activity {
         set.play(fangX).with(fangY).after(1500);
     }
 
-    @Override
-    protected void onPause() {
-        super.onPause();
+    private void admob(){
+        NativeExpressAdView adView = (NativeExpressAdView)findViewById(R.id.adView);
+        AdRequest request = new AdRequest.Builder()
+                .build();
+        adView.loadAd(request);
     }
+
+    private void wuchu(){
+        yanseButton.setVisibility(View.GONE);
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try { Thread.sleep(3500); }  catch (Exception e) { }
+                finish();
+            }
+        }).start();
+    }
+
 
 }
